@@ -5,7 +5,8 @@ algorithmique avec moteur d'analyse technique (Smart Money Concepts),
 gestion du risque paramétrable, backtesting et tableau de bord Streamlit.
 
 > 🚀 **Application en ligne** : accessible en un clic via le navigateur,
-> sur PC comme sur mobile — voir la section [Accès direct à l'application](#-accès-direct-à-lapplication).
+> sur PC comme sur mobile — voir la section
+> [Accès direct à l'application](#-accès-direct-à-lapplication).
 
 ## 📥 Téléchargement du code source
 
@@ -18,15 +19,19 @@ Ces liens fonctionnent immédiatement : un clic télécharge le code source
 
 ## 🚀 Accès direct à l'application
 
-L'application est déployée sur **Streamlit Community Cloud** :
+> ⏳ **L'URL de l'application en ligne sera ajoutée ici après le
+> déploiement** (voir la procédure ci-dessous). Ce lien n'existe pas
+> encore — ne pas le diffuser tant qu'il n'a pas été complété.
 
-- **URL de l'application** : [https://edit-trading.streamlit.app](https://edit-trading.streamlit.app)
-  *(URL finale fournie par Streamlit lors du déploiement — voir ci-dessous)*
+### Comment déployer (5 minutes)
 
-Un clic sur le lien ouvre l'application directement dans le navigateur,
-sans installation, sur PC, tablette et mobile.
+**Étape 1 — Fusionner la Pull Request**
 
-### Comment déployer / mettre à jour
+Ouvrez https://github.com/ralphkerrypierrecharles386-afk/Faster-trading-platform/pull/2
+et cliquez sur **Merge pull request**. Sans cette étape, le fichier
+`dashboard/app.py` n'existe pas sur `main` et le déploiement échouera.
+
+**Étape 2 — Déployer sur Streamlit Community Cloud**
 
 1. Ouvrez https://share.streamlit.io et connectez-vous avec votre compte GitHub.
 2. Cliquez **New app**.
@@ -36,8 +41,12 @@ sans installation, sur PC, tablette et mobile.
    - **Main file path** : `dashboard/app.py`
 4. Cliquez **Deploy**. Après 1-2 minutes, Streamlit affiche l'URL de
    votre application (`https://<nom-choisi>.streamlit.app`).
-5. Ajoutez cette URL dans ce README (remplacez le lien ci-dessus) —
-   c'est le lien « clic et ça ouvre » à partager.
+5. Remplacez le bloc ⏳ ci-dessus par :
+   ```markdown
+   - **Application en ligne** : [https://VOTRE-URL.streamlit.app](https://VOTRE-URL.streamlit.app)
+   ```
+   C'est le lien « clic et ça ouvre » à partager — un clic ouvre
+   l'application directement dans le navigateur, sur PC et mobile.
 
 ### Lancer en local (alternative)
 
@@ -59,8 +68,8 @@ streamlit run dashboard/app.py
 Faster-trading-platform/
 ├── config/            # Configuration centralisée (settings.py)
 ├── core/              # Base de données (SQLAlchemy)
-├── dashboard/         # Tableau de bord Streamlit (app.py + assets/)
-├── data/              # Stockage (base SQLite)
+├── dashboard/         # Tableau de bord Streamlit (app.py)
+├── data/              # Stockage (base SQLite, créée au premier lancement)
 └── requirements.txt   # Dépendances Python
 ```
 
@@ -81,7 +90,7 @@ pip install -r requirements.txt
 | 3. Gestion du risque | Position sizing, DD max, R:R min | ✅ v1 fonctionnelle |
 | 4. Backtesting | Moteur event-driven, métriques | ✅ v1 |
 | 5. Tableau de bord | Streamlit : équité, trades, signaux | ✅ v1 |
-| 6. Déploiement cloud | Streamlit Community Cloud | ✅ prêt à déployer |
+| 6. Déploiement cloud | Streamlit Community Cloud | ⏳ prêt à déployer |
 
 ## Avertissement
 
