@@ -1,0 +1,1 @@
+# Package config : configuration centralisée
